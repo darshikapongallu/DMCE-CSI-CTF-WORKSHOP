@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>CSI-CTF</title>
+</head>
+<style>
+    .description {
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        color: #000000;
+        text-align: justify;
+    }
+        input[type=text] {
+  width: 20%;
+  padding: 5px 10px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+input[type=submit] {
+ 
+  background-color: white; 
+  color: black; 
+ 
+}
+</style>
+
+<body>
+
+    <div class="container  mt-5 p-5">
+        <h2>Cereal Killer</h2>
+        <p class="description">
+            From the given image below find the flag inside the image.
+            This can be solved online if you don't want to do it by hand!
+            <br>
+            Hint: What is a hex editor?
+
+        </p>
+        <div class="container mt-5 text-center">
+            <img src="./assets/images/Q2.jpg" width="30%" height="40%"></img>
+
+        </div>
+
+        <div class="mt-5 container  text-center mb-4 ">
+            <a class="btn btn-primary" href="./assets/images/Q2.jpg" download>
+          Download
+        </a>
+        </div>
+    </div>
+    <center>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          Name: <input type="text" name="fname" placeholder="Enter the flag here..">
+          <input type="submit" value="Submit">
+        </form>
+    </center>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+
+<script>
+  function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false; 
+    }
+    if (x == "csi-ctf{_jhfoPld94#ldLkdGyt$}") {
+      alert("Congrats! You got the flag");
+     
+    }
+    else{
+      alert("Opps!");
+      return false;
+    }
+    
+  }
+  </script>
+
+</body>
+
+</html>
